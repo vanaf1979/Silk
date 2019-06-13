@@ -30,19 +30,19 @@ final class TextDomain implements Service, Registerable {
      */
     public function register() : void {
 
-        \add_action( 'after_setup_theme' , array( $this , 'load_theme_textdomain' ), 1 );
+        \add_action( 'plugins_loaded' , array( $this , 'load_plugin_textdomain' ) , 1 );
 
     }
 
 
     /**
-     * load_theme_textdomain.
+     * load_plugin_textdomain.
      *
-     * Register textdomain for theme translation.
+     * Register textdomain for plugin translation.
      *
      * @return void
      */
-    public function load_theme_textdomain() : void {
+    public function load_plugin_textdomain() : void {
 
         \load_theme_textdomain( TEXT_DOMAIN , THEME_PATH . '/languages' );
 
