@@ -27,6 +27,7 @@ class Silk {
 
         return [
             'TextDomain' => \Silk\Services\TextDomain::class,
+            'Sidebar' => \Silk\Services\Sidebar::class,
             'FrontendEnqueue' => \Silk\Services\FrontendEnqueue::class,
         ];
 

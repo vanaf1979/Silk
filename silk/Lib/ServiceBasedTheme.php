@@ -12,7 +12,7 @@ class ServiceBasedTheme {
     /**
      * The main plugin class.
      */
-    private $themeclass = null;
+    private $pluginclass = null;
 
     /**
      * Array of services.
@@ -39,61 +39,63 @@ class ServiceBasedTheme {
      */
     public function initialize_plugin() : void {
 
-        $this->set_plugin_class();
+        $this->get_plugin_class();
 
-        $this->get_plugin_services();
-
-        $this->run_plugin_services();
+        $this->run_services();
 
     }
 
 
     /**
-     * set_plugin_class.
+     * get_plugin_class.
      *
      * Get instance of the main plugin class.
      *
-     * @return void
+     * @return Silk
      */
-    private function set_plugin_class() : void {
+    private function get_plugin_class() : Silk {
 
-        if( $this->themeclass == null ) {
+        if( $this->pluginclass == null ) {
 
-            $this->themeclass = new Silk();
+            $this->pluginclass = new Silk();
 
         }
+
+        return $this->pluginclass;
         
     }
 
 
     /**
-     * get_plugin_services.
+     * get_services.
      *
      * Get array of services.
      *
-     * @return void
+     * @return array
      */
-    private function get_plugin_services() : void {
+    private function get_services() : array {
 
         if( $this->services == null ) {
 
-            $this->services = $this->themeclass->get_service_classes();
+            $this->services = $this->pluginclass->get_service_classes();
 
         }
+
+        return $this->services;
         
     }
 
 
     /**
-     * run_plugin_services.
+     * run_services.
      *
      * Check and instantiate the service classes.
      *
      * @return void
      */
-    private function run_plugin_services() : void {
+    private function run_services() : void {
 
-        $services = $this->services;
+        $services = $this->get_services();
 
         $builder = new \DI\ContainerBuilder();
 

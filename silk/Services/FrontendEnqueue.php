@@ -2,8 +2,8 @@
 /**
  * Enqueue styles and scripts for the frontend.
  *
- * @package    FunctionsPhp
- * @subpackage FunctionsPhp/Services
+ * @package    Silk
+ * @subpackage Silk/Services
  */
 
 namespace Silk\Services;
