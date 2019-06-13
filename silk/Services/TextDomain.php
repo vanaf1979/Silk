@@ -44,7 +44,7 @@ final class TextDomain implements Service, Registerable {
      */
     public function load_plugin_textdomain() : void {
 
-        \load_theme_textdomain( TEXT_DOMAIN , THEME_PATH . '/languages' );
+        \load_plugin_textdomain( TEXT_DOMAIN , false , SILK_PATH . '/languages/' );
 
     }
 
