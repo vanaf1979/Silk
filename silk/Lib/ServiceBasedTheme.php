@@ -10,7 +10,7 @@ use Silk\Lib\Container;
 class ServiceBasedTheme {
 
     /**
-     * The main theme class.
+     * The main plugin class.
      */
     private $themeclass = null;
 
@@ -25,37 +25,37 @@ class ServiceBasedTheme {
      */
     public function __construct() {
 
-        $this->initialize_theme();
+        $this->initialize_plugin();
         
     }
 
 
     /**
-     * initialize_theme.
+     * initialize_plugin.
      *
-     * Call the main theme class and run all services.
+     * Call the main plugin class and run all services.
      *
      * @return void
      */
-    public function initialize_theme() : void {
+    public function initialize_plugin() : void {
 
-        $this->set_theme_class();
+        $this->set_plugin_class();
 
-        $this->get_theme_services();
+        $this->get_plugin_services();
 
-        $this->run_theme_services();
+        $this->run_plugin_services();
 
     }
 
 
     /**
-     * set_theme_class.
+     * set_plugin_class.
      *
-     * Get instance of the main theme class.
+     * Get instance of the main plugin class.
      *
      * @return void
      */
-    private function set_theme_class() : void {
+    private function set_plugin_class() : void {
 
         if( $this->themeclass == null ) {
 
@@ -67,13 +67,13 @@ class ServiceBasedTheme {
 
 
     /**
-     * get_theme_services.
+     * get_plugin_services.
      *
      * Get array of services.
      *
      * @return void
      */
-    private function get_theme_services() : void {
+    private function get_plugin_services() : void {
 
         if( $this->services == null ) {
 
@@ -85,13 +85,13 @@ class ServiceBasedTheme {
 
 
     /**
-     * run_theme_services.
+     * run_plugin_services.
      *
      * Check and instantiate the service classes.
      *
      * @return void
      */
-    private function run_theme_services() : void {
+    private function run_plugin_services() : void {
 
         $services = $this->services;
 
@@ -99,7 +99,7 @@ class ServiceBasedTheme {
 
         $builder->addDefinitions([
 
-            FunctionsPhp\Dependencies\Single::class => \DI\factory('FunctionsPhp\Dependencies\Single::instance')
+            Silk\Dependencies\Single::class => \DI\factory('Silk\Dependencies\Single::instance')
             
         ]);
 
@@ -107,7 +107,7 @@ class ServiceBasedTheme {
 
         foreach ( $services as $id => $service ) {
 
-            if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Conditional' ) ) {
+            if ( is_subclass_of( $service , 'Silk\Lib\Conditional' ) ) {
                 
                 if( ! $service::is_needed() ) {
    
@@ -119,7 +119,7 @@ class ServiceBasedTheme {
 
             $service = $container->get( $service  );
 
-            if ( is_subclass_of( $service , 'FunctionsPhp\Lib\Registerable' ) ) {
+            if ( is_subclass_of( $service , 'Silk\Lib\Registerable' ) ) {
 
                 $service->register();
 
