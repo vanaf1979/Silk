@@ -15,7 +15,7 @@
  * Author URI:        https://vanaf1979.nl
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       sikj
+ * Text Domain:       silk
  * Domain Path:       /languages
  */
 
