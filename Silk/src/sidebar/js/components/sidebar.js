@@ -6,7 +6,7 @@ import React from 'react'
 /**
  * Local dependencies.
  */
-import SbModal from './sbmodal.js'
+import Modal from './modal.js'
 import ViewGoogle from './view-google.js'
 import ViewFacebook from './view-facebook.js'
 import ViewTwitter from './view-twitter.js'
@@ -24,7 +24,10 @@ const { compose } = wp.compose;
 const { withDispatch, withSelect } = wp.data;
 
 /**
- * Sidebar component.
+ * Sidebar component voor the gutenberg editor.
+ *
+ * @since 1.0.0
+ * @author Vanaf1979 - Stephan Nijman http://vanaf1979.nl
  */
 class Sidebar extends React.Component {
     
@@ -36,7 +39,6 @@ class Sidebar extends React.Component {
             
         }
 
-        // Bind methods
         this.openModal = this.openModal.bind(this);
 
     }
@@ -46,13 +48,6 @@ class Sidebar extends React.Component {
 
         this.props.toggleModalOpen()
         
-    }
-
-
-    onSelect( tabName ) {
-
-        console.log( 'Selecting tab', tabName );
-
     }
 
 
@@ -127,11 +122,11 @@ class Sidebar extends React.Component {
 
                 </PluginSidebar>
 
-                <SbModal>
+                <Modal>
                 
                     <TabPanel className="edit-post"
                         activeClass="active-tab"
-                        onSelect={ this.onSelect }
+                        onSelect={}
                         className="silk-tabs"
                         initialTabName="Google"
                         tabs={ [
@@ -180,7 +175,7 @@ class Sidebar extends React.Component {
                         }
                     </TabPanel>
 
-                </SbModal>
+                </Modal>
 
             </Fragment>
         )

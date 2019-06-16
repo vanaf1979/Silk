@@ -23,9 +23,12 @@ const { Icon } = wp.components;
 Modal.setAppElement('#editor');
 
 /**
- * Modal component class.
+ * Modal component.
+ *
+ * @since 1.0.0
+ * @author Vanaf1979 - Stephan Nijman http://vanaf1979.nl
  */
-class SbModal extends React.Component {
+class Modal extends React.Component {
     
     constructor() {
 
@@ -114,4 +117,4 @@ export default compose([
 
     }),
 
-])( SbModal );
+])( Modal );
