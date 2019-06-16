@@ -3077,8 +3077,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
 
 
+/**
+ * Local dependencies.
+ */
+
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var compose = wp.compose.compose;
@@ -3086,7 +3097,14 @@ var _wp$data = wp.data,
     withDispatch = _wp$data.withDispatch,
     withSelect = _wp$data.withSelect;
 var Icon = wp.components.Icon;
+/**
+ * Attach the modal.
+ */
+
 react_modal__WEBPACK_IMPORTED_MODULE_1___default.a.setAppElement('#editor');
+/**
+ * Modal component class.
+ */
 
 var SbModal =
 /*#__PURE__*/
@@ -3195,12 +3213,23 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
+
+/**
+ * Local dependencies.
+ */
 
 
 
 
 
 
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
@@ -3219,6 +3248,9 @@ var compose = wp.compose.compose;
 var _wp$data = wp.data,
     withDispatch = _wp$data.withDispatch,
     withSelect = _wp$data.withSelect;
+/**
+ * Sidebar component.
+ */
 
 var Sidebar =
 /*#__PURE__*/
@@ -3245,7 +3277,7 @@ function (_React$Component) {
   }, {
     key: "onSelect",
     value: function onSelect(tabName) {
-      console.log('Selecting tab', tabName); // TODO: Set active tab in UI Stora.
+      console.log('Selecting tab', tabName);
     }
   }, {
     key: "render",
@@ -3316,8 +3348,7 @@ function (_React$Component) {
   }]);
 
   return Sidebar;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component); //export default Sidebar
-
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (compose([withDispatch(function (dispatch, props) {
   return {
@@ -3362,12 +3393,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$components = wp.components,
     TextControl = _wp$components.TextControl,
     TextareaControl = _wp$components.TextareaControl;
+/**
+ * ViewFacebook component class.
+ */
 
 var ViewFacebook =
 /*#__PURE__*/
@@ -3442,8 +3483,19 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
+
+/**
+ * Local dependencies.
+ */
 
 
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
@@ -3455,6 +3507,9 @@ var _wp$components = wp.components,
     Popover = _wp$components.Popover,
     MenuGroup = _wp$components.MenuGroup,
     MenuItem = _wp$components.MenuItem;
+/**
+ * ViewGoogle component class.
+ */
 
 var ViewGoogle =
 /*#__PURE__*/
@@ -3537,12 +3592,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$components = wp.components,
     TextControl = _wp$components.TextControl,
     TextareaControl = _wp$components.TextareaControl;
+/**
+ * ViewSchema component class.
+ */
 
 var ViewSchema =
 /*#__PURE__*/
@@ -3611,12 +3676,22 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+/**
+ * External dependencies.
+ */
+
+/**
+ * WordPress dependencies.
+ */
 
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$components = wp.components,
     TextControl = _wp$components.TextControl,
     TextareaControl = _wp$components.TextareaControl;
+/**
+ * ViewTwitter componentn class.
+ */
 
 var ViewTwitter =
 /*#__PURE__*/
@@ -3711,15 +3786,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./store/settingsstore.js */ "./silk/src/sidebar/js/store/settingsstore.js");
 /* harmony import */ var _store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_store_settingsstore_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _icons_icons_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./icons/icons.js */ "./silk/src/sidebar/js/icons/icons.js");
+/**
+ * Local dependencies.
+ */
 
 
 
 
-var registerPlugin = wp.plugins.registerPlugin; // Gebruiken: https://github.com/reactjs/react-modal#demos
+/**
+ * WordPress dependencies.
+ */
+
+var registerPlugin = wp.plugins.registerPlugin;
+/**
+ * Register the sidebar plugin.
+ */
 
 registerPlugin("silk", {
   icon: _icons_icons_js__WEBPACK_IMPORTED_MODULE_3__["default"].butterfly,
-  // The Plugin Dashicon
   render: _components_sidebar_js__WEBPACK_IMPORTED_MODULE_0__["default"]
 });
 

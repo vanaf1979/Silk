@@ -1,9 +1,15 @@
 <?php
 /**
+ * Sidebar_Class
+ * 
  * Enqueue editor sidebar styles and scripts.
  *
- * @package    Silk
- * @subpackage Silk/Services
+ * @package Silk
+ * @subpackage Silk\Services
+ * @author Stephan Nijman <vanaf1979@gmail.com>
+ * @since 1.0.0
+ * @license GPL-2.0+
+ * @todo finish the functions on this page
  */
 
 namespace Silk\Services;
@@ -18,16 +24,23 @@ final class Sidebar implements Service, Registerable, Conditional {
 
 
     /**
-     * the constructor.
+     * __construct.
+     * 
+     * @param string $string description 
+     * @return void
+     * @access private
      */
-    public function __construct( ) { }
+    public function __construct( ) : void { }
 
 
     /**
      * is_needed.
-     *
+     * 
      * Should this service bee initialized?
-     *
+     * 
+     * @uses is_admin() https://developer.wordpress.org/reference/functions/is_admin/
+     * 
+     * @static
      * @return bool
      */
     static function is_needed() : bool {
@@ -41,7 +54,10 @@ final class Sidebar implements Service, Registerable, Conditional {
      * register.
      *
      * Register hooks with WordPress.
+     * 
+     * @uses add_action() https://developer.wordpress.org/reference/functions/add_action/
      *
+     * @access public
      * @return void
      */
     public function register() : void {
@@ -54,9 +70,12 @@ final class Sidebar implements Service, Registerable, Conditional {
 
     /**
      * enqueue_styles.
-     *
+     * 
      * Enqueue editor sidebar stylesheets.
-     *
+     * 
+     * @uses wp_enqueue_style() https://developer.wordpress.org/reference/functions/wp_enqueue_style/
+     * 
+     * @access public
      * @return void
      */
     public function enqueue_styles() : void {
@@ -68,9 +87,12 @@ final class Sidebar implements Service, Registerable, Conditional {
 
     /**
      * enqueue_scripts.
-     *
+     * 
      * Enqueue editor sidebar scripts.
-     *
+     * 
+     * @uses wp_enqueue_script() https://developer.wordpress.org/reference/functions/wp_enqueue_script/
+     * 
+     * @access public
      * @return void
      */
     public function enqueue_scripts() : void {
