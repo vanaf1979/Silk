@@ -1,6 +1,6 @@
 <?php
 /**
- * Sidebar_Class
+ * Sidebar
  * 
  * Enqueue editor sidebar styles and scripts.
  *
@@ -21,7 +21,6 @@ use Silk\Lib\Conditional;
 
 
 final class Sidebar implements Service, Registerable, Conditional {
-
 
     /**
      * __construct.

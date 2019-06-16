@@ -1,9 +1,15 @@
 <?php
 /**
- * Register meta fields.
+ * MetaFields
+ * 
+ * Register meta fields with WordPress.
  *
- * @package    Silk
- * @subpackage Silk/Services
+ * @package Silk
+ * @subpackage Silk\Services
+ * @author Vanaf1979 Stephan Nijman
+ * @link https://vanaf1979.nl
+ * @since 1.0.0
+ * @license GPL-2.0+
  */
 
 namespace Silk\Services;
@@ -16,9 +22,12 @@ use Silk\Lib\Registerable;
 final class MetaFields implements Service, Registerable {
 
     /**
-     * Meta field names.
+     * fields
+     * 
+     * Meta field names to register.
      *
      * @var array $fields
+     * @access private
      */
     private $fields = array(
         'silk_g_browser_title',
@@ -42,16 +51,22 @@ final class MetaFields implements Service, Registerable {
 
 
     /**
-     * Constructor.
+     * __construct.
+     * 
+     * @return void
+     * @access public
      */
-    public function __construct() { }
+    public function __construct() : void { }
 
 
     /**
      * register.
      *
      * Register hooks with WordPress.
+     * 
+     * @uses add_action() https://developer.wordpress.org/reference/functions/add_action/
      *
+     * @access public
      * @return void
      */
     public function register() : void {
@@ -63,9 +78,12 @@ final class MetaFields implements Service, Registerable {
 
     /**
      * register_meta_fields.
-     *
-     * Register meta fields for.
-     *
+     * 
+     * Register meta fields with WordPress.
+     * 
+     * @uses register_meta() https://developer.wordpress.org/reference/functions/register_meta/
+     * 
+     * @access public
      * @return void
      */
     public function register_meta_fields() : void {
@@ -78,7 +96,7 @@ final class MetaFields implements Service, Registerable {
 
         foreach( $this->fields as $field ) {
 
-            register_meta( 'post' , $field , $args );
+            \register_meta( 'post' , $field , $args );
 
         }
         

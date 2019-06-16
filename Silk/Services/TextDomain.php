@@ -1,9 +1,15 @@
 <?php
 /**
- * Register textdomain for theme translation.
+ * TextDomain
+ * 
+ * Register the plugin textdomain with WordPress.
  *
- * @package    FunctionsPhp
- * @subpackage FunctionsPhp/Services
+ * @package Silk
+ * @subpackage Silk\Services
+ * @author Vanaf1979 Stephan Nijman
+ * @link https://vanaf1979.nl
+ * @since 1.0.0
+ * @license GPL-2.0+
  */
 
 namespace Silk\Services;
@@ -16,16 +22,22 @@ use Silk\Lib\Registerable;
 final class TextDomain implements Service, Registerable {
 
     /**
-     * the constructor.
+     * __construct.
+     * 
+     * @return void
+     * @access public
      */
-    public function __construct() { }
+    public function __construct() : void { }
 
 
     /**
      * register.
      *
      * Register hooks with WordPress.
+     * 
+     * @uses add_action() https://developer.wordpress.org/reference/functions/add_action/
      *
+     * @access public
      * @return void
      */
     public function register() : void {
@@ -38,8 +50,11 @@ final class TextDomain implements Service, Registerable {
     /**
      * load_plugin_textdomain.
      *
-     * Register textdomain for plugin translation.
+     * Register the plugin textdomain with WordPress.
+     * 
+     * @uses load_plugin_textdomain() https://developer.wordpress.org/reference/functions/load_plugin_textdomain/
      *
+     * @access public
      * @return void
      */
     public function load_plugin_textdomain() : void {
