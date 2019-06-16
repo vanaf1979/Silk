@@ -7,7 +7,7 @@ use Silk\Silk;
 use Silk\Lib\Container;
 
 
-class ServiceBasedTheme {
+class ServiceBasedPlugin {
 
     /**
      * The main plugin class.

@@ -12,8 +12,6 @@ namespace Silk\Services;
 use Silk\Lib\Service;
 use Silk\Lib\Registerable;
 use Silk\Lib\Conditional;
-use Silk\Dependencies\Dep;
-use Silk\Dependencies\Single;
 
 
 final class FrontendEnqueue implements Service, Registerable, Conditional {
@@ -26,11 +24,7 @@ final class FrontendEnqueue implements Service, Registerable, Conditional {
     /**
      * the constructor.
      */
-    public function __construct( Dep $dep, Single $single ) { 
-
-        $this->dep = $dep;
-
-        $single->echo();
+    public function __construct( ) { 
 
     }
 

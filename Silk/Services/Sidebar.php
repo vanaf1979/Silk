@@ -32,7 +32,7 @@ final class Sidebar implements Service, Registerable, Conditional {
      */
     static function is_needed() : bool {
 
-        return  \is_admin() ? true : false;
+        return \is_admin() ? true : false;
 
     }
 

@@ -4,11 +4,9 @@ namespace Silk;
 
 
 /* Enable autoloading */
-//require_once __DIR__ . '/Autoloader.php';
-
-//( new \FunctionsPhp\Lib\Autoloader() )->add_namespace( __NAMESPACE__, get_template_directory() . '/functionsphp' )->register();
-
 require_once __DIR__ . '/../../vendor/autoload.php';
 
-/* Run the theme */
-( new \Silk\Lib\ServiceBasedTheme() );
+
+/* Run the plugin */
+( new \Silk\Lib\ServiceBasedPlugin() );
+
