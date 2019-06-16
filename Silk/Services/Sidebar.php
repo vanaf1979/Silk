@@ -10,7 +10,6 @@
  * @link https://vanaf1979.nl
  * @since 1.0.0
  * @license GPL-2.0+
- * @todo finish the functions on this page
  */
 
 namespace Silk\Services;
@@ -27,9 +26,8 @@ final class Sidebar implements Service, Registerable, Conditional {
     /**
      * __construct.
      * 
-     * @param string $string description 
      * @return void
-     * @access private
+     * @access public
      */
     public function __construct( ) : void { }
 
