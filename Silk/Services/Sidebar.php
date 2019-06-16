@@ -6,7 +6,8 @@
  *
  * @package Silk
  * @subpackage Silk\Services
- * @author Stephan Nijman <vanaf1979@gmail.com>
+ * @author Vanaf1979 Stephan Nijman
+ * @link https://vanaf1979.nl
  * @since 1.0.0
  * @license GPL-2.0+
  * @todo finish the functions on this page
