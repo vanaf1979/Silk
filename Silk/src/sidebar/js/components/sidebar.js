@@ -1,12 +1,21 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Local dependencies.
+ */
 import SbModal from './sbmodal.js'
 import ViewGoogle from './view-google.js'
 import ViewFacebook from './view-facebook.js'
 import ViewTwitter from './view-twitter.js'
 import ViewSchema from './view-schema.js'
-
 import icons from '../icons/icons.js'
 
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editPost;
@@ -14,7 +23,9 @@ const { Panel, PanelBody, PanelRow, TabPanel, TextControl, TextareaControl, Radi
 const { compose } = wp.compose;
 const { withDispatch, withSelect } = wp.data;
 
-
+/**
+ * Sidebar component.
+ */
 class Sidebar extends React.Component {
     
     constructor() {
@@ -41,7 +52,6 @@ class Sidebar extends React.Component {
     onSelect( tabName ) {
 
         console.log( 'Selecting tab', tabName );
-        // TODO: Set active tab in UI Stora.
 
     }
 
@@ -58,8 +68,6 @@ class Sidebar extends React.Component {
                 </PluginSidebarMoreMenuItem>
 
                 <PluginSidebar name="silk-sidebar" title={__("Silk SEO", "silk")} >
-
-                    {/* <Butterfly/> */}
 
                     <Panel>
 
@@ -181,7 +189,6 @@ class Sidebar extends React.Component {
 
 }
 
-//export default Sidebar
 
 export default compose([
 

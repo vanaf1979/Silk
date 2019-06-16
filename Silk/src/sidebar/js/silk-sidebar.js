@@ -1,15 +1,21 @@
 
+/**
+ * Local dependencies.
+ */
 import Sidebar from './components/sidebar.js';
 import './store/uistore.js'
 import './store/settingsstore.js'
-
 import icons from './icons/icons.js'
 
+/**
+ * WordPress dependencies.
+ */
 const { registerPlugin } = wp.plugins;
 
-// Gebruiken: https://github.com/reactjs/react-modal#demos
-
+/**
+ * Register the sidebar plugin.
+ */
 registerPlugin("silk", {
-    icon: icons.butterfly, // The Plugin Dashicon
+    icon: icons.butterfly,
     render: Sidebar
 });

@@ -1,12 +1,24 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
+
+/**
+ * Local dependencies.
+ */
 import ProtoTextfield from './fields/proto-textfield.js';
 import GBrowserTitle from './fields/GBrowserTitle.js';
 
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { TextControl, TextareaControl, RadioControl, Button, Popover, MenuGroup, MenuItem } = wp.components;
 
-
+/**
+ * ViewGoogle component class.
+ */
 class ViewGoogle extends React.Component {
     
     constructor() {
@@ -35,8 +47,6 @@ class ViewGoogle extends React.Component {
             <Fragment>
 
                 <h5>Google inputs view</h5>
-
-                {/* <ProtoTextfield/> */}
 
                 <GBrowserTitle/>
                     

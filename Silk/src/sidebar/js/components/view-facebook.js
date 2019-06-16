@@ -1,9 +1,18 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
 
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { TextControl, TextareaControl } = wp.components;
 
+/**
+ * ViewFacebook component class.
+ */
 class ViewFacebook extends React.Component {
     
     constructor() {

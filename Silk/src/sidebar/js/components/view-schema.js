@@ -1,10 +1,18 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
 
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { TextControl, TextareaControl } = wp.components;
 
-
+/**
+ * ViewSchema component class.
+ */
 class ViewSchema extends React.Component {
     
     constructor() {

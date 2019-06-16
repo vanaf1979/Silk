@@ -1,21 +1,32 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
 import Modal from 'react-modal';
 
+/**
+ * Local dependencies.
+ */
 import icons from '../icons/icons.js'
 
-
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { compose } = wp.compose;
 const { withDispatch, withSelect } = wp.data;
 const { Icon } = wp.components;
 
-
+/**
+ * Attach the modal.
+ */
 Modal.setAppElement('#editor');
 
-
+/**
+ * Modal component class.
+ */
 class SbModal extends React.Component {
     
-
     constructor() {
 
         super()
@@ -46,7 +57,6 @@ class SbModal extends React.Component {
 
 
     afterOpenModal() {
-
 
     }
 

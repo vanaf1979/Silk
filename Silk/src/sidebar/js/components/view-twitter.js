@@ -1,10 +1,18 @@
+/**
+ * External dependencies.
+ */
 import React from 'react'
 
+/**
+ * WordPress dependencies.
+ */
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { TextControl, TextareaControl } = wp.components;
 
-
+/**
+ * ViewTwitter componentn class.
+ */
 class ViewTwitter extends React.Component {
     
     constructor() {
