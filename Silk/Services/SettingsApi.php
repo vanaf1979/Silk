@@ -67,6 +67,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
     public function register() : void {
         
         \add_action( 'rest_api_init' , array( $this , 'register_routes' ) );
+        
     }
 
 
@@ -113,7 +114,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
      */
     public function get_items( \WP_REST_Request $request ) : \WP_REST_Response {
 
-        print_r( $request['id'] );
+        print_r( $request );
 
         $args = array(
             'post_per_page' => 5,
