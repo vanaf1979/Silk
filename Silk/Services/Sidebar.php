@@ -25,10 +25,9 @@ final class Sidebar implements Service, Registerable, Conditional {
     /**
      * __construct.
      * 
-     * @return void
      * @access public
      */
-    public function __construct( ) : void { }
+    public function __construct( ) { }
 
 
     /**

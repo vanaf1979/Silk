@@ -34,6 +34,7 @@ class Silk {
             'TextDomain' => \Silk\Services\TextDomain::class,
             'Sidebar' => \Silk\Services\Sidebar::class,
             'MetaFields' => \Silk\Services\MetaFields::class,
+            'SettingsApi' => \Silk\Services\SettingsApi::class,
         ];
 
     }

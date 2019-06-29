@@ -24,10 +24,9 @@ final class TextDomain implements Service, Registerable {
     /**
      * __construct.
      * 
-     * @return void
      * @access public
      */
-    public function __construct() : void { }
+    public function __construct() { }
 
 
     /**
