@@ -81,6 +81,8 @@ final class SettingsApi implements Service, Registerable, Conditional {
      * @return void
      */
     public function register_routes() : void {
+
+        // http://silk.test/wp-json/va79/v1/posts/?_wpnonce=a9c23fc6f2
         
         \register_rest_route( $this->namespace, '/' . $this->resource_name, array(
 
@@ -91,7 +93,8 @@ final class SettingsApi implements Service, Registerable, Conditional {
             ),
 
             'schema' => array( $this , 'get_item_schema' ),
-        ) );
+
+        ));
 
     }
 
@@ -109,6 +112,8 @@ final class SettingsApi implements Service, Registerable, Conditional {
      * @return \WP_REST_Response
      */
     public function get_items( \WP_REST_Request $request ) : \WP_REST_Response {
+
+        print_r( $request['id'] );
 
         $args = array(
             'post_per_page' => 5,
