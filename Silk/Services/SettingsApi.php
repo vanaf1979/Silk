@@ -67,7 +67,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
     public function register() : void {
         
         \add_action( 'rest_api_init' , array( $this , 'register_routes' ) );
-        
+
     }
 
 
@@ -114,8 +114,6 @@ final class SettingsApi implements Service, Registerable, Conditional {
      */
     public function get_items( \WP_REST_Request $request ) : \WP_REST_Response {
 
-        print_r( $request );
-
         $args = array(
             'post_per_page' => 5,
         );
@@ -123,6 +121,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
         $posts = \get_posts( $args );
 
         return \rest_ensure_response( $posts );
+
     }
 
 
@@ -187,6 +186,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
      * @return array
      */
     public function get_item_schema( \WP_REST_Request $request ) : array {
+
         $schema = array(
             '$schema'              => 'http://json-schema.org/draft-04/schema#',
             'title'                => 'post',
@@ -206,6 +206,7 @@ final class SettingsApi implements Service, Registerable, Conditional {
         );
  
         return $schema;
+        
     }
 
 
